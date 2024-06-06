@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  bitespeed-sampleproject:
+    container_name: bitespeed-sampleproject
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/bitespeed-sampleproject:cached
+    stdin_open: true
+    tty: true
+    command: "./mvnw spring-boot:run"
+    ports:
+      - 8080:8080
