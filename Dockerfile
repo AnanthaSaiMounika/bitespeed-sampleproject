@@ -7,6 +7,10 @@ WORKDIR /bitespeed-sampleproject
 # Copy the project files to the working directory
 COPY . .
 
+# Install Maven Wrapper
+RUN apt-get update && apt-get install -y curl \
+    && curl -o .mvn/wrapper/maven-wrapper.jar https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/0.6.6/maven-wrapper-0.6.6.jar
+
 # Make the mvnw script executable
 RUN chmod +x ./mvnw
 
