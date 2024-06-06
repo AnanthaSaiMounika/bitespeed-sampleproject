@@ -1,8 +1,17 @@
-FROM openjdk:17.0.2
-RUN mkdir /bitespeed-sampleproject
+# Use an official OpenJDK runtime as a parent image
+FROM openjdk:11-jdk-slim
+
+# Set the working directory in the container
 WORKDIR /bitespeed-sampleproject
-COPY . /bitespeed-sampleproject
-RUN chmod +x /bitespeed-sampleproject/mvnw
-RUN ./mvnw clean install -Dmaven.test.skip=true
-EXPOSE 8080
-CMD [ "./mvnw", "spring-boot:run" ]
+
+# Copy the project files to the working directory
+COPY . .
+
+# Make the mvnw script executable
+RUN chmod +x ./mvnw
+
+# Package the application using the Maven Wrapper
+RUN ./mvnw clean package
+
+# Run the application
+CMD ["java", "-jar", "target/bitespeed-sampleproject.jar"]
