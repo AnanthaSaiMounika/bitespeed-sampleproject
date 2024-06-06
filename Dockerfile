@@ -13,10 +13,11 @@ RUN chmod +x ./mvnw
 # Package the application using the Maven Wrapper
 RUN ./mvnw clean install
 
-# Make the JAR file executable
-RUN chmod +x ./target/bitespeed-sampleproject.jar
 
 EXPOSE 8080
 
 # Run the application
 CMD ["java", "-jar", "target/bitespeed-sampleproject.jar"]
+
+# Make the JAR file executable
+RUN chmod +x ./target/bitespeed-sampleproject.jar
