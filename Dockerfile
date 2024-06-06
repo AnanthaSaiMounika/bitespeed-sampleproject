@@ -18,4 +18,4 @@ RUN chmod +x ./mvnw
 RUN ./mvnw clean package
 
 # Run the application
-CMD ["java", "-jar", "target/bitespeed-sampleproject.jar"]
+CMD ["java", "-cp", ".mvn/wrapper/maven-wrapper.jar:target/bitespeed-sampleproject.jar", "org.apache.maven.wrapper.MavenWrapperMain"]
