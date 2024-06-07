@@ -24,3 +24,8 @@ replay_pid*
 
 
 /target
+
+### VS Code ###
+.vscode/
+*.env*
+/mvnw.cmd
