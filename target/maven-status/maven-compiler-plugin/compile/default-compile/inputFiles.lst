@@ -1,8 +1,0 @@
-/bitespeed-sampleproject/src/main/java/com/bitespeed/sample_project/SampleProjectApplication.java
-/bitespeed-sampleproject/src/main/java/com/bitespeed/sample_project/controller/IdentityReconcilationController.java
-/bitespeed-sampleproject/src/main/java/com/bitespeed/sample_project/data/bo/Contact.java
-/bitespeed-sampleproject/src/main/java/com/bitespeed/sample_project/data/repository/ContactRepository.java
-/bitespeed-sampleproject/src/main/java/com/bitespeed/sample_project/data/service/IdentityReconsilationService.java
-/bitespeed-sampleproject/src/main/java/com/bitespeed/sample_project/model/IdentityRequest.java
-/bitespeed-sampleproject/src/main/java/com/bitespeed/sample_project/model/IdentityResponse.java
-/bitespeed-sampleproject/src/main/java/com/bitespeed/sample_project/model/LinkPrecedence.java
